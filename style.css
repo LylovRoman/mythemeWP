@@ -1,0 +1,236 @@
+/*
+Theme Name: My Theme
+Text Domain: mytheme
+Version: 1.0
+Description: this is my theme
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+}
+
+body {
+	min-height: 100vh;
+}
+
+:root {
+	--main-color: antiquewhite;
+	--main-text-color: #000000;
+}
+
+.wrapper {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.header {
+	background: var(--main-color);
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-1 {
+	flex: 1;
+}
+
+.jcc {
+	justify-content: center;
+}
+
+.jcsb {
+	justify-content: space-between;
+}
+
+.aic {
+	align-items: center;
+}
+
+.fdc {
+	flex-direction: column;
+}
+
+.header a {
+	display: block;
+	padding: 10px 20px;
+	color: black;
+	text-decoration: none;
+}
+
+main .section {
+	padding: 10px 0;
+}
+
+.header a:hover {
+	background: #00000055;
+}
+
+.section.slider {
+	min-height: 500px;
+}
+
+.section.sales .wrapper {
+	padding: 5px 0;
+	border-top: 2px solid gray;
+	border-bottom: 2px solid gray;
+}
+
+.sales__list {
+	display: grid;
+	grid-template-columns: repeat(3, 30%);
+}
+
+.sales__list .sales__item {
+	gap: 5px;
+	padding: 20px;
+}
+
+.sales__list .sales__item .sales__title {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.sales__list .sales__item .sales__image {
+	min-width: 50px;
+	min-height: 50px;
+	height: 50px;
+	background: #aaaaaa;
+}
+
+/*.section.goods .wrapper {*/
+/*    display: grid;*/
+/*    grid-template-columns: 1fr 3fr;*/
+/*}*/
+
+.section.goods .filter {
+	background: #aaaaaa;
+	padding: 10px 5px;
+	min-width: 25%;
+	min-height: max-content;
+}
+
+.section.goods .filter .filter__search-btn {
+	width: 100%;
+	padding: 5px 10px;
+}
+
+.section.goods .filter .filter__fields .filter__field {
+	padding: 10px 0;
+}
+
+.section.goods .filter .filter__fields .filter__field .title {
+	font-size: 28px;
+	font-weight: bold;
+	border-bottom: 1px solid #000000;
+}
+
+.section.goods .filter .filter__fields .filter__field .values {
+	padding-left: 10px;
+}
+
+.section.goods .filter .filter__fields .filter__field .values > li {
+	gap: 5px;
+	padding: 5px 0;
+}
+
+.goods__list {
+	gap: 20px;
+	flex-wrap: wrap;
+	padding: 0 10px;
+}
+
+.goods {
+	gap: 5px;
+	padding: 5px;
+	border: 1px solid #aaaaaa;
+	height: max-content;
+}
+
+.goods .goods__image {
+	min-width: 200px;
+	min-height: 200px;
+	background: #aaaaaa;
+}
+
+.goods .goods__buy-btn {
+	width: 100%;
+	padding: 5px 10px;
+	cursor: pointer;;
+}
+
+.footer {
+	background: #000000;
+	color: #ffffff;
+}
+
+.footer__container {
+	gap: 10px;
+	padding: 20px 0;
+}
+
+.footer__container a {
+	color: white;
+	text-decoration: none;
+}
+
+.footer__container a:hover {
+	text-decoration: underline;
+}
+
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	padding: 10px;
+}
+
+.slick-dots > li {
+	display: block;
+	width: 30px;
+	height: 5px;
+	border-radius: 3em;
+	background: #aaaaaa;
+	cursor: pointer;
+	transition: 0.6s;
+}
+
+.slick-arrow {
+	display: none;
+}
+
+.slide {
+
+}
+
+.slide__content {
+	height: 300px;
+	background: antiquewhite;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slick-dots > li.slick-active {
+	background: rebeccapurple;
+}
+
+.slick-dots > li > button {
+	display: none;
+}
+
+@media screen and (max-width: 1024px) {
+	.wrapper {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.wrapper {
+		width: 100%;
+		padding: 0 5px;
+	}
+}
