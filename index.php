@@ -6,21 +6,26 @@
     <div class="section">
         <div class="wrapper">
             <div class="slider">
-                <div class="slide">
-                    <div class="slide__content">
-                        SLIDE 1
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="slide__content">
-                        SLIDE 2
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="slide__content">
-                        SLIDE 3
-                    </div>
-                </div>
+                <?php
+                if( have_posts() ){
+                    query_posts(array('posts_per_page' => 10, 'cat' => 7));
+                    while( have_posts() ){
+                        the_post();
+                        ?>
+                        <div class="slide">
+                            <div class="slide__content">
+                                <?php the_post_thumbnail(); ?>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                    <?php
+                }
+                else {
+                    echo "<h2>Записей нет.</h2>";
+                }
+                ?>
             </div>
         </div>
     </div>

@@ -16,10 +16,10 @@
     <div class="wrapper">
         <div class="header__container flex jcsb aic">
             <div class="logo">
-                <h3><a href="http://wordpress-mytheme">Главная страница</a></h3>
+                <h3>Лого</h3>
             </div>
             <nav class="nav flex">
-                <a href="#">Главная</a>
+                <a href="<?php echo get_home_url(); ?>">Главная</a>
                 <a href="#">Курсы</a>
                 <a href="#">Мастер классы</a>
                 <a href="#">Заказать</a>
